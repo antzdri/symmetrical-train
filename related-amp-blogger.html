@@ -76,7 +76,8 @@ function getQueryVariable(variable) {
   }
   return(false);
 }
-var labelArray = [getQueryVariable("label")],
+var label = getQueryVariable("label"),
+var labelArray = [encodeURIComponent(label)],
     relatedPostConfig = {
 		homePage: getQueryVariable("url"),
         numPosts: 6,
