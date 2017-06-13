@@ -76,8 +76,7 @@ function getQueryVariable(variable) {
   }
   return(false);
 }
-var label = getQueryVariable("label");
-var labelArray = [label.replace("&","%26")],
+var labelArray = [getQueryVariable("label")],
     relatedPostConfig = {
 		homePage: getQueryVariable("url"),
         numPosts: 6,
